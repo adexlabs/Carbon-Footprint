@@ -93,7 +93,7 @@ const HeroSection = () => {
 
      
       // ✅ Store Data in Supabase with Error Handling
-const { error } = await supabase.from("client").insert([
+const { error } = await supabase.from("UserData").insert([
   {
     url: inputURL,
     page_weight: (totalByteWeight / (1024 * 1024)).toFixed(2),
