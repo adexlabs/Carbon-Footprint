@@ -8,8 +8,8 @@ import WebsiteScore from "@/components/pages/WebsiteScore";
 import PageWeightScore from "@/components/pages/PageWeightScore";
 import WebsiteGrade from "@/components/pages/WebsiteGrade";
 import WebsiteVisitsChart from "@/components/pages/WebsiteVisitsChart";
-import Suggestions from "@/components/pages/Suggestions";
 import { generateDynamicContent } from "@/lib/content";
+import { generateSuggestions } from "@/lib/suggestions"; // Import suggestions generator
 import supabase from "@/lib/supabaseClient";
 import "@/styles/ResultsPage.css";
 
@@ -19,22 +19,30 @@ const ResultsPage = () => {
   const [loading, setLoading] = useState(true);
   const [finalScore, setFinalScore] = useState(null);
   const [dynamicContent, setDynamicContent] = useState(null);
+  const [suggestions, setSuggestions] = useState([]);
   const [yearlyVisits, setYearlyVisits] = useState(100000); // Default yearly visits
 
   useEffect(() => {
     const fetchReport = async () => {
       setLoading(true);
+      let websiteUrl = ""; // Initialize empty string to avoid undefined errors
 
       const storedData = localStorage.getItem(`report-${uniqueId}`);
       if (storedData) {
         try {
           const parsedData = JSON.parse(storedData);
-          parsedData.grams = parseFloat(parsedData.grams) || 0; // Ensure it's a number
-          parsedData.MB = parseFloat(parsedData.MB) || 0; // Ensure it's a number
-          
+          parsedData.grams = parseFloat(parsedData.grams) || 0;
+          parsedData.MB = parseFloat(parsedData.MB) || 0;
+          websiteUrl = parsedData.websiteUrl || ""; // Ensure websiteUrl is defined
+
           setResults(parsedData);
           calculateFinalScore(parsedData);
           setDynamicContent(generateDynamicContent(parsedData.grams, yearlyVisits));
+
+          // Generate suggestions dynamically
+          const generatedSuggestions = generateSuggestions(parsedData.grams, parsedData.MB, parsedData.lighthouseData, websiteUrl);
+          setSuggestions(generatedSuggestions);
+
           setLoading(false);
           return;
         } catch (error) {
@@ -44,7 +52,7 @@ const ResultsPage = () => {
 
       // Fetch from Supabase if localStorage is empty
       const { data, error } = await supabase
-        .from("client")
+        .from("UserData")
         .select("*")
         .eq("unique_url", `/results/${uniqueId}`)
         .single();
@@ -54,18 +62,24 @@ const ResultsPage = () => {
         setResults(null);
       } else {
         const fetchedResults = {
-          websiteUrl: data.website_url,
+          websiteUrl: data.website_url || "Unknown Website",
           device: "Desktop",
-          MB: parseFloat(data.page_weight) || 0, // Ensure number
-          grams: parseFloat(data.co2e_per_visit) || 0, // Ensure number
-          lighthouseData: data.lighthouse_data || null,  
+          MB: parseFloat(data.page_weight) || 0,
+          grams: parseFloat(data.co2e_per_visit) || 0,
+          lighthouseData: data.lighthouse_data || null,
           resourceSizeData: data.resource_size_data || [],
           resourceCountData: data.resource_count_data || [],
         };
 
+        websiteUrl = fetchedResults.websiteUrl; // Assign to websiteUrl
+
         setResults(fetchedResults);
         calculateFinalScore(fetchedResults);
         setDynamicContent(generateDynamicContent(fetchedResults.grams, yearlyVisits));
+
+        // Generate suggestions dynamically
+        const generatedSuggestions = generateSuggestions(fetchedResults.grams, fetchedResults.MB, fetchedResults.lighthouseData, websiteUrl);
+        setSuggestions(generatedSuggestions);
       }
 
       setLoading(false);
@@ -95,6 +109,7 @@ const ResultsPage = () => {
       {/* Report Summary */}
       <div className="report-summary">
         <h3>🔎 Report Summary</h3>
+        <p><strong>Website:</strong> {results.websiteUrl}</p>
         <p><strong>Device:</strong> {results.device || "Unknown"}</p>
         <p><strong>Website Page Weight:</strong> {results.MB ? results.MB.toFixed(2) : "0.00"} MB</p>
         <p><strong>CO₂ Emissions per Visit:</strong> {results.grams ? results.grams.toFixed(2) : "0.00"} g</p>
@@ -127,8 +142,17 @@ const ResultsPage = () => {
         {dynamicContent}
       </div>
 
-      {/* Suggestions Section */}
-      <div><Suggestions /></div>
+      {/* Suggestions Section - Dynamically Generated Based on Website */}
+      <div className="suggestions-section">
+        <h3>💡 How to Improve Your Website</h3>
+        <ul>
+          {suggestions.length > 0 ? (
+            suggestions.map((suggestion, index) => <li key={index}>{suggestion}</li>)
+          ) : (
+            <p>✅ Your website is well-optimized! Keep up the good work!</p>
+          )}
+        </ul>
+      </div>
     </div>
   );
 };
