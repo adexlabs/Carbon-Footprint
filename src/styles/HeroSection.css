@@ -2,10 +2,7 @@
 .hero-section {
   padding: 60px 0;
   background: #e0f3ff;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  height: 850px;
 }
 
 /* Center Content */
@@ -16,59 +13,62 @@
   padding-top: 50px;
 }
 
-.hero-inner h4 {
-  color: #00843d;
-  font-size: 27px;
-  margin-bottom: 12px;
-}
-
 .hero-inner h1 {
   color: #00843d;
-  font-size: 64px;
+  font-size: 84px;
   font-weight: bold;
-  line-height: 1.2;
+}
+
+.hero-inner p {
+  color: #fff;
 }
 
 /* Section containing the form */
 .section-home {
-  margin-top: 40px;
   background: #fff;
-  max-width: 900px;
-  padding: 60px 70px;
-  border-radius: 20px;
-  box-shadow: 0 9px 17px rgba(67, 65, 79, 0.1);
-  text-align: center;
+  max-width: 1000px;
+    margin: 40px auto;
+    padding: 70px 90px 80px;
+    border-radius:22px 22px;
+	box-shadow: 0 9px 17px 0 rgba(67, 65, 79, 0.1);
 }
 
 /* Section Heading */
 .section-home h3 {
+  font-size: 32px;
+  margin-bottom: 25px;
   color: #00843d;
-  font-size: 28px;
-  margin-right: 80px;
-  margin-bottom: 20px;
 }
 
-/* Form Container */
-.section-home form {
-  margin-top: 20px;
-  width: 100%;
+.section-home form{
+  display: flex;
+    column-gap: 5px;
 }
+
 
 /* Form Inputs */
-.section-home .MuiTextField-root {
-  font-size: 16px;
-  border-radius: 8px;
-  width: 100%;
+.section-home .label {
+  height: 60px;
+    width: 80%;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 15px;
+	font-size: 18px;
 }
+
 
 /* Submit Button */
 .section-home .MuiButton-root {
-  height: 55px;
+  height: 60px;
   background-color: #00843d;
   color: #fff;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 8px;
+  border: 0;
+  padding: 10px 80px;
+  font-size: 20px;
+  font-weight: 600;
+  
+  border-radius: 10px;
+  line-height: 27px;
   cursor: pointer;
   transition: background 0.3s ease;
 }
@@ -84,11 +84,10 @@
 
 /* Loading and Results */
 .section-home p {
-  max-width: 550px;
-  margin: 25px 0 0;
-  line-height:17px;
-  font-size: 13px;
- 
+ max-width: 436px;
+    font-size: 13px;
+    margin: 25px 0 0;
+    line-height: 17px;
 }
 
 /* Results Section */
@@ -117,7 +116,7 @@
 .results a:hover {
   text-decoration: underline;
 }
-/* -------------------------------------------------------------- */
+
 /* Linear progress bar styling */
 .section-home .MuiLinearProgress-root {
   margin-top: 20px;
@@ -175,12 +174,23 @@
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
 /* Results Page Styling */
 .results-container {
   max-width: 100%;
   margin: 50px auto;
   padding: 30px;
-  background: #bde3ee;
+  background: #e0f3ff;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
   border-radius: 12px;
   text-align: center;
@@ -236,3 +246,33 @@
   z-index: 1;
 }
 
+.yearly-impact {
+  background: #e8f5e9;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+}
+
+.yearly-impact h3 {
+  color: #2e7d32;
+  text-align: center;
+  font-size: 20px;
+}
+
+.yearly-impact p {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0;
+  color: #555;
+}
+
+.uiux-score {
+  background-color: #f3f4f6;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 10px 0;
+  font-size: 1.2em;
+}

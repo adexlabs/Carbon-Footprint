@@ -1,0 +1,202 @@
+/* 🌍 Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🏅 Badge Section */
+.getBadge {
+  padding: 40px 0 90px;
+  background-color: #f7f6f6;
+  text-align: center;
+  position: relative;
+}
+
+/* 🎨 SVG Wave */
+.waveSvg {
+  background-color: #ffffff; /* White background */
+  width: 100%;
+  height: auto;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* 📏 Page Width Container */
+.pageWidth {
+  max-width: 1800px;
+  margin: auto;
+  padding: 0 5rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* 🎖️ Badge Container */
+.badgeContainer {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  align-items: center;
+  justify-content: center;
+  max-width: 1148px;
+  margin: auto;
+  background: #00843d;
+  border-radius: 20px;
+  padding: 20px 40px;
+  margin-top: 100px;
+  gap: 20px;
+}
+
+/* 📜 Badge Content */
+.badgeContentDetails {
+  padding-left: 20px;
+  color: #fff;
+  text-align: left;
+}
+
+.badgeContentDetails h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.badgeContentDetails p {
+  font-size: 20px;
+  line-height: 32px;
+  margin-bottom: 15px;
+}
+
+/* 🎟️ Badge Button */
+.badgeButton {
+  border: none;
+  background: none;
+  display: inline-block;
+  margin-top: 40px;
+}
+
+.btnBadge {
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 18px 40px;
+  border-radius: 10px;
+  line-height: 27px;
+  cursor: pointer;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 🎨 Hover Effect */
+.btnBadge:hover {
+  background-color: #e6e6e6;
+  color: #333;
+}
+
+/* 📸 Badge Media */
+.badgeMedia {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.badgeMedia img {
+  max-width: 360px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* ✅ Responsive Design */
+
+/* 🖥️ Large Screens (Television) */
+@media screen and (min-width: 1800px) {
+  .pageWidth {
+    max-width: 2000px;
+    padding: 0 8rem;
+  }
+  .badgeContainer {
+    max-width: 1300px;
+    padding: 40px 50px;
+  }
+  .badgeContentDetails h2 {
+    font-size: 50px;
+  }
+  .badgeContentDetails p {
+    font-size: 22px;
+  }
+  .btnBadge {
+    font-size: 22px;
+    padding: 20px 50px;
+  }
+}
+
+/* 💻 Laptops & Desktops */
+@media screen and (max-width: 1200px) {
+  .pageWidth {
+    padding: 0 3rem;
+  }
+  .badgeContainer {
+    max-width: 1000px;
+  }
+  .badgeContentDetails h2 {
+    font-size: 35px;
+  }
+  .badgeContentDetails p {
+    font-size: 18px;
+  }
+  .btnBadge {
+    font-size: 18px;
+    padding: 16px 35px;
+  }
+}
+
+/* 📱 Tablets */
+@media screen and (max-width: 992px) {
+  .badgeContainer {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 30px;
+  }
+  .badgeContentDetails {
+    padding: 0;
+  }
+  .badgeContentDetails h2 {
+    font-size: 30px;
+  }
+  .badgeContentDetails p {
+    font-size: 16px;
+  }
+  .btnBadge {
+    font-size: 16px;
+    padding: 14px 30px;
+  }
+  .badgeMedia img {
+    max-width: 300px;
+  }
+}
+
+/* 📲 Mobile */
+@media screen and (max-width: 768px) {
+  .pageWidth {
+    padding: 0 1.5rem;
+  }
+  .badgeContainer {
+    padding: 20px;
+  }
+  .badgeContentDetails h2 {
+    font-size: 24px;
+  }
+  .badgeContentDetails p {
+    font-size: 14px;
+  }
+  .btnBadge {
+    font-size: 14px;
+    padding: 12px 25px;
+  }
+  .badgeMedia img {
+    max-width: 250px;
+  }
+}

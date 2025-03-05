@@ -1,0 +1,11 @@
+.website-ranking {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .ranking-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff9800;
+  }
+  

@@ -1,0 +1,137 @@
+element.style {
+}
+.footer {
+    background: #000;
+    padding: 50px 0;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+user agent stylesheet
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+.footer-container .footer-logo {
+  text-align: center;
+}
+.footer-container .footer-logo img {
+  max-width: 50px;
+  margin: auto;
+}
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+.footer-container .footer-logo {
+  text-align: center;
+}
+.footer-container .footer-logo {
+  text-align: center;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+user agent stylesheet
+div {
+  display: block;
+  unicode-bidi: isolate;
+}
+.footer ul {
+  display: flex
+;
+  column-gap: 30px;
+  justify-content: center;
+  padding: 30px 0;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+user agent stylesheet
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  unicode-bidi: isolate;
+}
+.footer ul li {
+  position: relative;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+user agent stylesheet
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+  unicode-bidi: isolate;
+}
+user agent stylesheet
+ul {
+  list-style-type: disc;
+}
+.footer ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+user agent stylesheet
+a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.footer-container .bottom {
+  text-align: center;
+  border-top: 1px solid #2c2c2c;
+  padding-top: 30px;
+  font-size: 13px;
+}
+.footer-container .bottom .copyright, .footer-container .bottom .copyright a {
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  margin-bottom: 0;
+}
+p {
+  font-size: 20px;
+  line-height: 32px;
+  margin-bottom: 15px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+user agent stylesheet
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+.footer-container .bottom {
+  text-align: center;
+  border-top: 1px solid #2c2c2c;
+  padding-top: 30px;
+  font-size: 13px;
+}

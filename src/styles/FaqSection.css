@@ -1,0 +1,151 @@
+/* ✅ General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ✅ FAQ Section */
+.faq-section {
+  background: #f3f3f3;
+  padding: 0;
+}
+
+.faq-section .page-width {
+  max-width: 1800px;
+  margin: auto;
+  padding: 65px 5rem;
+}
+
+/* ✅ Headings */
+h2, h4 {
+  margin: 0; /* 🚀 Removed extra spacing */
+  padding: 10px 0; /* 🚀 Added consistent spacing */
+  text-align: center;
+}
+
+.faq-section h2 {
+  font-size: 80px;
+  padding-top: 10px;
+  color: #333;
+}
+
+.faq-section h4 {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+/* ✅ SVG Styling */
+.faq-section svg {
+  margin-top: -18px;
+  transform: rotate(180deg);
+  display: block;
+  width: 100%;
+  height: 60px;
+}
+
+/* ✅ FAQ Content Panels */
+.faq-inner-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1150px;
+  margin: auto;
+  padding-top: 40px; /* 🚀 Reduced spacing */
+}
+
+.faq-content-panel {
+  border: 2px solid #000;
+  border-radius: 15px;
+  padding: 20px 40px;
+  background: #fff;
+  box-shadow: 0px 2px 0px #000;
+  transition: box-shadow 0.3s ease;
+}
+
+.faq-content-panel:hover {
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.faq-content-panel h3 {
+  margin-bottom: 10px; /* 🚀 Reduced spacing */
+  color: #00843d;
+  font-size: 24px;
+}
+
+.faq-content-panel p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 10px; /* 🚀 Reduced spacing */
+  color: #555;
+}
+
+/* ✅ Responsive Design */
+
+/* 🖥️ Large Screens (TV & Large Monitors) */
+@media screen and (min-width: 1800px) {
+  .faq-section .page-width {
+    max-width: 2000px;
+    padding: 70px 8rem;
+  }
+  .faq-section h2 {
+    font-size: 90px;
+  }
+  .faq-content-panel {
+    padding: 30px 50px;
+  }
+}
+
+/* 💻 Laptops & Desktops */
+@media screen and (max-width: 1200px) {
+  .faq-section .page-width {
+    padding: 0 3rem;
+  }
+  .faq-section h2 {
+    font-size: 70px;
+  }
+  .faq-content-panel {
+    padding: 20px 30px;
+  }
+}
+
+/* 📱 Tablets */
+@media screen and (max-width: 992px) {
+  .faq-section .page-width {
+    padding: 0 2rem;
+  }
+  .faq-section h2 {
+    font-size: 50px;
+  }
+  .faq-content-panel {
+    padding: 15px 25px;
+  }
+  .faq-content-panel h3 {
+    font-size: 22px;
+  }
+  .faq-content-panel p {
+    font-size: 16px;
+  }
+}
+
+/* 📲 Mobile */
+@media screen and (max-width: 768px) {
+  .faq-section .page-width {
+    padding: 0 1rem;
+  }
+  .faq-section h2 {
+    font-size: 40px;
+  }
+  .faq-section h4 {
+    font-size: 18px;
+  }
+  .faq-content-panel {
+    padding: 12px 20px;
+  }
+  .faq-content-panel h3 {
+    font-size: 20px;
+  }
+  .faq-content-panel p {
+    font-size: 14px;
+  }
+}

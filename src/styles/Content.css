@@ -1,0 +1,84 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.image-with-text{
+	padding: 60px 0  125px;
+}
+
+.image-with-text .image-with-text-block{
+	display:flex;
+	column-gap: 80px;
+	align-items: center;
+}
+
+.image-container{
+	width:45%;
+}
+
+.text-container{
+	width:55%;
+}
+
+.image-with-text .image-with-text-block .media-banner{
+	  
+    border-radius: 3px;
+}
+.image-with-text .image-with-text-block .media-banner img{
+	width:100%;
+}
+
+.image-with-text .image-with-text-block .content-info h2{
+	font-size: 50px;
+    margin-bottom: 40px;
+}
+
+.image-with-text .image-with-text-block .content-info p{
+	font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 1200px) {
+	.image-with-text .image-with-text-block{
+		    flex-wrap: wrap;
+	}
+	.image-with-text .image-container {
+    width: 100%;
+}
+.image-with-text .text-container {
+    width: 100%;
+}
+}
+
+@media only screen and (max-width: 991px) {
+	.image-with-text .image-with-text-block .content-info h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.hero-section svg {
+   
+    display: none;
+}
+}
+
+@media only screen and (max-width: 767px) {
+	.image-with-text {
+    padding: 60px 0 80px;
+}
+
+.image-with-text .image-with-text-block .content-info p {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+
+p{
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+}

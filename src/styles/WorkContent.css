@@ -1,0 +1,299 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  display: block;
+  unicode-bidi: isolate;
+}
+
+/* Layout */
+.page-width, .header-layout {
+  max-width: 1800px;
+  margin: auto;
+  padding: 0 5rem;
+}
+
+/* How It Works Section */
+.how-it-work-section {
+  padding-bottom: 70px;
+  background-color: #e9eaff;
+
+}
+
+.how-it-work-section .heading-section {
+  text-align: center;
+  padding-top: 70px;
+  max-width: 900px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.how-it-work-section .heading-section{
+  font-size:60px;
+  margin-bottom:10px;
+}
+
+/* Improvement Features Section */
+.improvement-features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.improvement-features .features-list {
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.improvement-features .list-item-1 {
+  grid-row: span 2;
+  background: #abdcff;
+}
+
+.improvement-features .features-list .icon img {
+  max-width: 50px;
+}
+
+.improvement-features img {
+  display: block;
+  width: 100%;
+}
+
+/* Text Styling */
+h2, h3 {
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+
+h2 {
+  font-size: 60px;
+  margin: 0.83em 0;
+}
+
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+p {
+  font-size: 20px;
+  line-height: 32px;
+  margin-bottom: 15px;
+}
+
+/* Read More Button */
+.improvement-features .features-list .read-more {
+  color: #000;
+  text-decoration: underline;
+  font-weight: bold;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Button Styles */
+button {
+  appearance: auto;
+  text-rendering: auto;
+  color: buttontext;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  background-color: buttonface;
+  margin: 0;
+  padding: 6px 12px;
+  border: 2px outset buttonborder;
+}
+
+/* Improvement Features Section */
+.improvement-features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.improvement-features .features-list {
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.improvement-features .list-item-2 {
+  grid-column: span 2;
+  background: #ffe0cc;
+}
+
+.improvement-features img {
+  display: block;
+  width: 100%;
+}
+
+.improvement-features .features-list h3 {
+  margin-top: 20px;
+  margin-bottom: 6px;
+  font-size: 28px;
+}
+
+/* Paragraph Styles */
+p {
+  font-size: 20px;
+  line-height: 32px;
+  margin-bottom: 15px;
+}
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  font-size: 20px;
+  line-height: 32px;
+  margin-bottom: 15px;
+}
+
+h3 {
+  margin-top: 20px;
+  margin-bottom: 6px;
+  font-size: 28px;
+}
+
+/* Improvement Features Section */
+.improvement-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+.improvement-features .features-list {
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.improvement-features .list-item-2 {
+  grid-column: span 2;
+  background: #ffe0cc;
+}
+
+.improvement-features .list-item-3 {
+  grid-row: span 2;
+  background: #ffdade;
+}
+
+.improvement-features .features-list .icon img {
+  max-width: 50px;
+}
+
+.improvement-features img {
+  display: block;
+  width: 100%;
+}
+
+/* Read More Button */
+.improvement-features .features-list .read-more {
+  color: #000;
+  text-decoration: underline;
+  font-weight: bold;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* General Styles */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+p {
+  font-size: 20px;
+  line-height: 32px;
+  margin-bottom: 15px;
+}
+
+h3 {
+  margin-top: 20px;
+  margin-bottom: 6px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Improvement Features Section */
+.improvement-features .features-list {
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.improvement-features .list-item-2 {
+  grid-column: span 2;
+  background: #ffe0cc;
+}
+
+.improvement-features .list-item-3 {
+  grid-row: span 2;
+  background: #ffdade;
+}
+
+.improvement-features .list-item-4 {
+  background: #c3e9d4;
+}
+
+.improvement-features .list-item-5 {
+  background: #e9eaff;
+}
+
+.improvement-features .features-list .icon img {
+  max-width: 50px;
+}
+
+.improvement-features img {
+  display: block;
+  width: 100%;
+}
+
+.improvement-features .features-list .read-more {
+  color: #000;
+  text-decoration: underline;
+  font-weight: bold;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Button Styling */
+button {
+  cursor: pointer;
+  text-align: center;
+  border: 2px outset buttonborder;
+  background-color: buttonface;
+  padding: 6px;
+  font-size: 16px;
+}
+

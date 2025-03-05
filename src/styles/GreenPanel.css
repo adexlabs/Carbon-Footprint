@@ -1,0 +1,124 @@
+/* ✅ Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* ✅ Panel Styling */
+.green-panel {
+  position: relative;
+  z-index: 1;
+  background: #f6f6f6;
+  padding: 0;
+  padding-bottom: 60px;
+}
+
+.page-width, .header-layout {
+  max-width: 1800px;
+  margin: auto;
+  padding: 0 5rem;
+}
+
+/* ✅ Green Panel Container */
+.green-panel .green-panel-container {
+  display: grid;
+  grid-template-columns: 30% 60%;
+  max-width: 1400px;
+  margin: 45px auto;
+  justify-content: center;
+  background: #fff;
+  border-radius: 30px;
+  color: #000;
+  padding: 50px 0;
+  box-shadow: 0 1px 10px 0 rgba(67, 65, 79, 0.1);
+  align-items: center;
+  gap: 20px;
+}
+
+/* ✅ Image Styling */
+.green-panel img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+/* ✅ Paragraph Styling */
+.green-panel p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #333;
+  padding: 0 20px;
+  text-align: left;
+}
+
+/* ✅ Responsive Design */
+
+/* 🖥️ Large Screens (TV & Large Monitors) */
+@media screen and (min-width: 1800px) {
+  .page-width {
+    max-width: 2000px;
+    padding: 0 8rem;
+  }
+  .green-panel .green-panel-container {
+    grid-template-columns: 35% 55%;
+    padding: 60px 0;
+  }
+  .green-panel p {
+    font-size: 22px;
+  }
+}
+
+/* 💻 Laptops & Desktops */
+@media screen and (max-width: 1200px) {
+  .page-width {
+    padding: 0 3rem;
+  }
+  .green-panel .green-panel-container {
+    grid-template-columns: 40% 55%;
+    padding: 40px;
+  }
+  .green-panel p {
+    font-size: 18px;
+  }
+}
+
+/* 📱 Tablets */
+@media screen and (max-width: 992px) {
+  .green-panel .green-panel-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 40px;
+  }
+  .green-panel img {
+    max-width: 300px;
+  }
+  .green-panel p {
+    font-size: 16px;
+    padding: 0 30px;
+  }
+}
+
+/* 📲 Mobile */
+@media screen and (max-width: 768px) {
+  .page-width {
+    padding: 0 1.5rem;
+  }
+  .green-panel .green-panel-container {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
+  .green-panel img {
+    max-width: 250px;
+  }
+  .green-panel p {
+    font-size: 14px;
+    padding: 0 20px;
+  }
+}

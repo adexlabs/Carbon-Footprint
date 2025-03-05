@@ -1,0 +1,206 @@
+/* Header.css */
+.header {
+  overflow: hidden;
+  background-color: #fff;
+  padding: 10px clamp(1rem, 3vw, 4rem);
+  border-top: 3px solid #67a864;
+  position: relative;
+}
+
+/* Layout and Alignment */
+.header-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1800px;
+  margin: auto;
+  padding: 0 clamp(1rem, 5vw, 5rem);
+  position: relative;
+}
+
+/* Logo - Fix for corner alignment */
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 55px;
+  margin-left: 0;
+}
+
+.header a.logo img {
+  width: 100%;
+  display: block;
+  max-width: 55px;
+}
+
+/* Navigation Links */
+.header a {
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  font-family: "Gill Sans", sans-serif;
+}
+
+/* Header Right Section */
+.header-right {
+  display: flex;
+  gap: 15px;
+  padding-left: 5%;
+}
+
+/* Contact Button */
+.contact-us {
+  display: block;
+}
+
+.contact-us a {
+  background-color: #00843d;
+  color: #fff;
+  border: 0;
+  padding: 12px 30px;
+  font-size: 20px;
+  border-radius: 10px;
+  line-height: 27px;
+  cursor: pointer;
+}
+
+/* Mobile Menu Icon */
+.header .icon {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  z-index: 1000;
+}
+
+.header .icon img {
+  width: 36px;
+  height: 36px;
+}
+
+/* Mobile Menu */
+.header-right {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.header-right.show {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Close Icon */
+.close-icon {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .header-layout {
+    padding: 0 2rem;
+  }
+  .header .header-right a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  .header-layout {
+    padding: 0 1rem;
+  }
+
+  .header-right {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: white;
+    width: 250px;
+    height: 100%;
+    text-align: left;
+    box-shadow: -4px 0px 6px rgba(0, 0, 0, 0.1);
+    padding: 50px 20px;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+
+  .header-right.show {
+    display: flex;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .header .icon {
+    display: block;
+  }
+
+  .close-icon {
+    display: block;
+  }
+
+  .contact-us {
+    display: none; /* Hides "Contact Us" on small screens */
+  }
+
+  .header a.logo img {
+    max-width: 45px;
+    margin-left: 10px;
+  }
+
+  .header .header-right a {
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header .header-right a {
+    font-size: 14px;
+  }
+
+  .header a.logo img {
+    max-width: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header a.logo img {
+    max-width: 38px;
+  }
+
+  .header .icon img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .header-layout {
+    padding: 0 6rem;
+  }
+
+  .header .header-right a {
+    font-size: 20px;
+  }
+}

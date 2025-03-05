@@ -1,0 +1,244 @@
+/* ✅ Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ✅ General Layout */
+.page-width, .header-layout {
+  max-width: 1800px;
+  margin: auto;
+  padding: 0 5rem;
+}
+
+/* ✅ Contact Form Section */
+.contct-form {
+  background: #e0f5f3;
+  color: #000;
+  padding: 70px 5%;
+}
+
+/* ✅ Contact Form Wrapper */
+.contct-form .contact-form-wrap {
+  display: grid;
+  grid-template-columns: 50% 40%;
+  justify-content: center;
+  column-gap: 140px;
+}
+
+/* ✅ Form Wrapper */
+.contct-form .form-wrapper {
+  background-color: #fff;
+  color: #000;
+  padding: 2rem;
+  border-radius: 20px;
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+}
+
+/* ✅ Form Header */
+.contct-form .form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contact-form  .form-header section {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #00843d;
+}
+
+/* ✅ Text & Heading */
+.contct-form .img-text h2 {
+  font-size: 60px;
+  line-height: 1.2;
+}
+
+.contct-form .img-text p {
+  font-size: 20px;
+  line-height: 32px;
+  margin-bottom: 15px;
+}
+
+/* ✅ Contact Image */
+.contct-form .contact-img {
+  width: 100%;
+  max-width: 200px;
+  margin-top: 50px;
+}
+
+.contct-form .contact-img img {
+  height: auto;
+  width: 100%;
+}
+
+/* ✅ Form Fields */
+.contct-form .field-block {
+  margin-bottom: 20px;
+}
+
+/* ✅ Name Fields */
+.contct-form .name-field {
+  gap: 17px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* ✅ Labels */
+.contct-form .form-wrapper label {
+  font-size: 18px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* ✅ Inputs */
+.contct-form .form-wrapper input[type="text"],
+.contct-form .form-wrapper input[type="email"],
+.select {
+  width: 100%;
+  border: 2px solid #d7d9de;
+  background-color: #f3f3f5;
+  border-radius: 0.5rem;
+  padding: 0.8rem 15px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.contct-form .form-wrapper input:focus,
+.contct-form .form-wrapper textarea:focus {
+  outline: none;
+  border-color: #00843d;
+  background-color: #fff;
+}
+
+svg[Attributes ] {
+  width: 17;
+  height: 12;
+  fill: none;
+}
+user agent stylesheet
+svg:not(:root) {
+  overflow-clip-margin: content-box;
+  overflow: hidden;
+}
+
+/* ✅ Textarea */
+.contct-form .form-wrapper textarea {
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 1rem 15px;
+  border: 2px solid #d7d9de;
+  background-color: #f3f3f5;
+  min-height: 150px;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+/* ✅ Submit Button */
+.contct-form .form-wrapper .submit-button {
+  border: 1px solid #00843d;
+  background-color: #00843d;
+  color: #fff;
+  text-align: center;
+  border-radius: 100vw;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.4s;
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 30px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+.contct-form .submit-button:hover {
+  background-color: #006f2c;
+}
+
+/* ✅ Responsive Design */
+
+/* 🖥️ Large Screens (Television) */
+@media screen and (min-width: 1800px) {
+  .page-width {
+    max-width: 2000px;
+    padding: 0 8rem;
+  }
+  .contact-form-wrap {
+    grid-template-columns: 55% 40%;
+  }
+  .contct-form .img-text h2 {
+    font-size: 70px;
+  }
+  .contct-form .img-text p {
+    font-size: 24px;
+  }
+}
+
+/* 💻 Laptops & Desktops */
+@media screen and (max-width: 1200px) {
+  .page-width {
+    padding: 0 3rem;
+  }
+  .contct-form .contact-form-wrap {
+    grid-template-columns: 1fr;
+    row-gap: 50px;
+  }
+  .contct-form .img-text h2 {
+    font-size: 50px;
+  }
+  .contct-form .img-text p {
+    font-size: 18px;
+  }
+  .contct-form .submit-button {
+    font-size: 18px;
+  }
+}
+
+/* 📱 Tablets */
+@media screen and (max-width: 992px) {
+  .contct-form .contact-form-wrap {
+    grid-template-columns: 1fr;
+    padding: 50px;
+    text-align: center;
+  }
+  .contct-form .img-text h2 {
+    font-size: 40px;
+  }
+  .contct-form .img-text p {
+    font-size: 16px;
+  }
+  .contct-form .submit-button {
+    font-size: 16px;
+  }
+}
+
+/* 📲 Mobile */
+@media screen and (max-width: 768px) {
+  .page-width {
+    padding: 0 1.5rem;
+  }
+  .contct-form .contact-form-wrap {
+    padding: 40px;
+    row-gap: 30px;
+  }
+  .contct-form .img-text h2 {
+    font-size: 30px;
+  }
+  .contct-form .img-text p {
+    font-size: 14px;
+  }
+  .contct-form .submit-button {
+    font-size: 14px;
+    padding: 12px 25px;
+  }
+}
